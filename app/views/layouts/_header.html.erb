@@ -4,7 +4,7 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <%= link_to "#" do %>
+          <%= link_to root_path do %>
           <%= fa_icon("home lg icon") %>Home
           <% end %>
         </li>
@@ -16,6 +16,11 @@
          <li>
           <%= link_to "#" do %>
           <%= fa_icon("bars lg icon") %>Menu
+          <% end %>
+        </li>
+        <li>
+          <%= link_to users_path do %>
+          <%= fa_icon("bars lg icon") %>Users
           <% end %>
         </li>
       </ul>

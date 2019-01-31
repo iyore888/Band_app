@@ -1,0 +1,39 @@
+<% provide(:title, @user.name )%>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 col-sm-3 col-xs-12 profile">
+      <div class="avatar">
+        <h1>
+          <%= gravatar_for @user %><br>
+          <%= @user.name %>
+        </h1>
+      </div>
+      <div class="description">
+        <p>
+        2018年の夏に部品メーカーの営業からSES系のIT企業にエンジニア志望で転職をしました。 
+        現在はコツコツとRubyの学習をしており、 近々Webサイトのポートフォリオを作るべく奮闘中です！
+        </p>
+      </div>
+      <div class="info">
+        <ul>
+          <li>ジャンル：R&B</li>
+          <li>パート：Vocal</li>
+          <li>好きなアーティスト：Ne-Yo</li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-9 col-sm-9 col-xs-12 selecter">
+      <div class="row bar">
+        <div class="col-xs-6 box-btn">
+        <%= link_to "投稿", "#", class: "text" %>
+        </div>
+        <div class="col-xs-6 box-btn">
+        <%= link_to "投稿", "#", class: "text" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
