@@ -16,8 +16,14 @@ class UsersController < ApplicationController
   
   def create
     @user = User.new(user_params)
-    @user.save
-    redirect_to root_url
+    
+    if @user.save
+      flash[:success] = "Welcom Band app"
+      log_in @user
+      redirect_to @user
+    else
+      render 'new'
+    end
   end
   
   private
