@@ -6,5 +6,5 @@ class User < ApplicationRecord
                     uniqueness: { case_sensiteive: false }
   
   has_secure_password
-  validates :password, presence: true, length:{ minimum: 6 }
+  validates :password, presence: true, length:{ minimum: 6 }, allow_nil: true #has_secure_passwordでも存在性のバリデーションが実行されるのでnilでOK
 end
