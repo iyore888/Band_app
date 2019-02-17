@@ -11,7 +11,7 @@ module SessionsHelper
     cookies.permanent.signed[:user_id] = user.id
     cookies.permanent[:remember_token] = user.remember_token
   end
-
+  
   # 記憶トークンcookieに対応するユーザーを返す
   def current_user
     if (user_id = session[:user_id])
@@ -29,7 +29,7 @@ module SessionsHelper
   def logged_in?
     !current_user.nil?
   end
-  
+
   # 永続的セッションを破棄する
   def forget(user)
     user.forget

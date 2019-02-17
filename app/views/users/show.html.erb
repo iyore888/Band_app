@@ -11,29 +11,30 @@
       </div>
       <div class="description">
         <p>
-        担当のパートはボーカルとベースです。
-        メンバーを探しています。
-        よろしくお願いします。
+        <%= @user.content %>
         </p>
       </div>
       <div class="info">
         <ul>
-          <li>ジャンル：R&B</li>
-          <li>パート：Vocal</li>
-          <li>好きなアーティスト：Ne-Yo</li>
-          <li></li>
-          <li></li>
+          <li>ジャンル：<%= @user.genre %></li>
+          <li>パート：<%= @user.part %></li>
+          <li>好きなアーティスト：<%= @user.artist %></li>
         </ul>
       </div>
     </div>
     <div class="col-md-9 col-sm-9 col-xs-12 selecter">
       <div class="row bar">
         <div class="col-xs-6 box-btn">
-        <%= link_to "投稿", "#", class: "text" %>
+        <%= link_to "post", "#", class: "text" %>
         </div>
         <div class="col-xs-6 box-btn">
-        <%= link_to "投稿", "#", class: "text" %>
+        <%= link_to "following", "#", class: "text" %>
         </div>
+      </div>
+      <div class="col-md-9 col-sm-9 col-xs-12">
+        <ol>
+        <%= render @post %>
+        <ol>
       </div>
     </div>
   </div>

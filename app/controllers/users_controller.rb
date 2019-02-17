@@ -13,6 +13,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
+    @post = Post.all
     redirect_to root_url and return unless @user.activated?
   end
   
@@ -45,14 +46,7 @@ class UsersController < ApplicationController
   private
   
   def  user_params
-    params.require(:user).permit(:name ,:email , :password, :password_confirmation)
-  end
-  
-  def logged_in_user
-    unless logged_in?
-      flash[:danger] = "Please Log in!"
-      redirect_to login_url
-    end
+    params.require(:user).permit(:name ,:email ,:content, :genre, :part, :age, :gender, :artist, :password, :password_confirmation)
   end
   
   def correct_user

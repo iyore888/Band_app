@@ -1,11 +1,29 @@
     <%= form_for(@user, url: yield(:url)) do |f| %>
-      <%= render 'shared/error_messages' %>
+      <%= render 'shared/error_messages', object: f.object %>
       
       <%= f.label :name %>
       <%= f.text_field :name, class: 'form-control' %>
       
       <%= f.label :email %>
       <%= f.email_field :email, class: 'form-control' %>
+      
+      <%= f.label :genre %>
+      <%= f.text_field :genre, class: 'form-control' %>
+      
+      <%= f.label :age %>
+      <%= f.text_field :age, class: 'form-control' %>
+      
+      <%= f.label :gender %>
+      <%= f.text_field :gender, class: 'form-control' %>
+      
+      <%= f.label :part %>
+      <%= f.text_field :part, class: 'form-control' %>
+      
+      <%= f.label :artist %>
+      <%= f.text_field :artist, class: 'form-control' %>
+      
+      <%= f.label :content %>
+      <%= f.text_area :content, class: 'form-control' %>
       
       <%= f.label :password %>
       <%= f.password_field :password, class: 'form-control' %>
