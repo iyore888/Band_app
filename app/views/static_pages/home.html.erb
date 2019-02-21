@@ -1,5 +1,7 @@
 <% provide(:title, "Home")%>
+
 <div class="photo center"><%= image_tag 'band.jpg', :size => "700x400" %></div>
+
 <% if logged_in? %>
   <%= render 'static_pages/user_logged_in' %>
 <% else %>
