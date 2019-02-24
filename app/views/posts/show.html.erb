@@ -1,20 +1,30 @@
-<div>
-  <%= link_to gravatar_for(post.user, size: 50), post.user %>
-  <span class="name"><%= post.user.name %></span>
-  <ul>
-    <li>
-      Genre:<%= user.post.genre %>
-    </li>
-    <li>
-      Part:<%= user.post.part %>
-    </li>
-    <li>
-      Age:<%= user.post.age %>
-    </li>
-    <li>Content</li>
-    <p>
-      <%= user.post.content %>
-    </p>
-  </ul>
-  <span class="created_at"><%= time_ago_in_words(posts.created_at) %> ago</span>
+<div class="row post_show"> 
+  <div class="col-md-9">
+    <h1><%= @post.subject %></h1>
+    <ul class="post_ul">
+      <li>
+        Genre: <%= @post.genre %>
+      </li>
+      <!--<li>-->
+      <!--  Part:%= @post.part %-->
+      <!--</li>-->
+      <li>
+        Age: <%= @post.age %>
+      </li>
+      <li>Content</li>
+      <p>
+        <%= @post.content %>
+      </p>
+    </ul>
+    <span class="created_at"><%= time_ago_in_words(@post.created_at) %> ago</span>
+  </div>
+  <div class="col-md-3">
+    <%= link_to gravatar_for(@post.user, size: 50), @post.user %>
+    <span><%= @post.user.name %></span>
+    <ul>
+      <li><%= @post.user.part %></li>
+      <li><%= @post.user.genre %></li>
+      <li><%= @post.user.artist %></li>
+    </ul>
+  </div>
 </div>
