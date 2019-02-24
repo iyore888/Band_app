@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
-    @post = Post.all
+    @post = @user.posts.paginate(page: params[:page])
     redirect_to root_url and return unless @user.activated?
   end
   

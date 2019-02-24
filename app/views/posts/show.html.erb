@@ -1,11 +1,11 @@
 <div class="row post_show"> 
   <div class="col-md-9 panel panel-default box">
     <div class="panel-heading">
-      <h1 class="panel-title"><%= @post.subject %></h1>
+      <h1 class="panel-title p-subject"><%= @post.subject %></h1>
     </div>
     <div class="panel-body">
       <p>
-        <%= @post.content %>
+        <%= simple_format(@post.content) %>
       </p>
       <hr class="my-4">
       <ul class="post_ul">
@@ -13,14 +13,18 @@
           Genre: <%= @post.genre %>
         </li>
         <hr class="my-4">
-        <!--<li>-->
-        <!--  Part:%= @post.part %-->
-        <!--</li>-->
+        <li>
+          Part: <%= @post.part %>
+        </li>
+        <hr class="my-4">
         <li>
           Age: <%= @post.age %>
         </li>
         <hr class="my-4">
       </ul>
+      <% if current_user?(@post.user) %>
+        <%= link_to "Edit", edit_post_path, class: "btn btn-success btn-sm" %>
+      <% end %>
       <span class="created_at"><%= time_ago_in_words(@post.created_at) %> ago</span>
     </div>
   </div>
@@ -30,7 +34,7 @@
     <ul>
       <li>Part: <%= @post.user.part %></li>
       <li>Genre: <%= @post.user.genre %></li>
-      <li>artist: <%= @post.user.artist %></li>
+      <li>Artist: <%= @post.user.artist %></li>
     </ul>
   </div>
 </div>
