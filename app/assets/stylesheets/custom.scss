@@ -2,20 +2,59 @@
 @import "bootstrap";
 
 body{
-  padding-top: 60px;
+  padding-top: 70px;
 }
 
 .center{
   text-align: center;
+  margin-top: 20px;
 }
 
 .icon{
   margin-left: 30px;
 }
 
-.profile{
-  // background-color: #f0f0f0;
+// .carousel{
+//   height: 500px;
+//   margin: auto;
+//   .item{
+//     height: 100%;
+//     width: 100%;
+//   }
+//   .photo{
+//     width: 100%;
+//     height: 100%;
+//   }
+//   .image{
+//     height: 100%;
+//     width: 100%;
+//   }
+// }
+
+.carousel {
+  height: 500px;
 }
+
+.carousel-inner, .item {
+  height: 100%;
+}
+
+.carousel .image {
+  width: 100%;
+  height: 100% !important;
+  object-fit: fill;
+}
+
+.side-profile{
+  span{
+    margin-left: 15px;
+    font-size: 30px;
+  }
+  li{
+    margin-top: 5px;
+  }
+}
+
 
 .info{
   border-top-color: #eee;

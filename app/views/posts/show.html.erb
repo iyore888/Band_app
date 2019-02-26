@@ -28,13 +28,17 @@
       <span class="created_at"><%= time_ago_in_words(@post.created_at) %> ago</span>
     </div>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-3 side-profile">
     <%= link_to gravatar_for(@post.user, size: 50), @post.user %>
     <span><%= @post.user.name %></span>
+    <hr class="my-4">
+    <p><%= @post.user.content %></p>
+    <hr class="my-4">
     <ul>
       <li>Part: <%= @post.user.part %></li>
       <li>Genre: <%= @post.user.genre %></li>
       <li>Artist: <%= @post.user.artist %></li>
     </ul>
+    <hr class="my-4">
   </div>
 </div>
