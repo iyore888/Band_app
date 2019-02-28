@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
-    @posts = Post.all
+    @posts = Post.paginate(page: params[:page]).search(params[:search])
   end
 
   def help
