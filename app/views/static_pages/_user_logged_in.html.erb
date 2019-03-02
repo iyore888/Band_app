@@ -10,7 +10,7 @@
     <%= submit_tag "Search", name: :nil %>
   </p>  
 <% end %>
-<ol>
+<ol class="home_posts">
   <%= render @posts %>
 </ol>
 <%= will_paginate @posts %>
