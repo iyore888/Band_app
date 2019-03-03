@@ -1,7 +1,15 @@
-<header class="navbar navbar-fixed-top navbar-dar" style="background-color: #50aba9;">
+<nav class="navbar navbar-fixed-top navbar-default" style="background-color: #50aba9;">
   <div class="container">
     <%= link_to "Band app", root_path, id: "logo" %>
-    <nav>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menubar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+      <div class="collapse navbar-collapse" id="menubar">
       <ul class="nav navbar-nav navbar-right">
         <li>
           <%= link_to root_path, class: "menu" do %>
@@ -50,6 +58,6 @@
           </li>
         <% end %>
       </ul>
-    </nav>
+      </div>
   </div>
-</header>
+</nav>

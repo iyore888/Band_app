@@ -3,4 +3,5 @@
   <span class="name"><%= post.user.name%></span><br>
   <%= link_to post_path(post), class:"subject" do %><span><%= post.subject %></span><% end %><br>
   <span class="created_at"><%= time_ago_in_words(post.created_at) %> ago</span>
+  <%= render "likes/like", post: post %>
 </li>

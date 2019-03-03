@@ -18,23 +18,6 @@ body{
   text-align: center;
 }
 
-// .carousel{
-//   height: 500px;
-//   margin: auto;
-//   .item{
-//     height: 100%;
-//     width: 100%;
-//   }
-//   .photo{
-//     width: 100%;
-//     height: 100%;
-//   }
-//   .image{
-//     height: 100%;
-//     width: 100%;
-//   }
-// }
-
 .home_posts{
   padding-left: 0;
 }
@@ -190,10 +173,30 @@ body{
     }
 }
 
-  .menu{
-    color: white;
+  .navbar-default{
+    .navbar-nav{
+      li {
+        a {
+          color: black;
+        }
+        ul{
+          li{
+          // color: black;
+          }
+        }
+      }
+    }
   }
+  
 
+.navbar-default{
+  .navbar-toggle{
+  margin-right: 25px;
+    .icon-bar {
+    background: white;
+    }
+  }
+}
 
 footer{
   margin-top: 45px;

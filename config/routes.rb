@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   get 'rooms/show'
 
   get 'password_resets/new'
@@ -17,4 +18,5 @@ Rails.application.routes.draw do
   resources :password_resets,     only:[:new, :create, :edit, :update]
   resources :users  
   resources :posts,               only:[:new, :create, :edit, :update, :show]
+  resources :likes,               only:[:create, :destroy]
 end
