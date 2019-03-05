@@ -1,4 +1,4 @@
-<li class="post_li">
+<li class="post_li" id="post-<%= post.id %>" data-post-id="<%= post.id %>">
   <%= link_to gravatar_for(post.user, size: 50), post.user %>
   <span class="name"><%= post.user.name%></span><br>
   <%= link_to post_path(post), class:"subject" do %><span><%= post.subject %></span><% end %><br>
