@@ -11,7 +11,7 @@ class Post < ApplicationRecord
   validates :age, presence: true
   validates :gender, presence: true
   
-  def self.search(search) #ここでのself.はMicropost.を意味する
+  def self.search(search) #ここでのself.はPost.を意味する
     if search
       where(['content LIKE ?', "%#{search}%"]) #検索とcontentの部分一致を表示。Micropost.は省略。
     else
