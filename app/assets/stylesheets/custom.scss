@@ -259,3 +259,14 @@ footer{
     color: $state-danger-text;
   }
 }
+
+
+.chat-form{
+  margin: 10px;
+}
+
+textarea {
+  resize: none;
+  width:350px;
+  height:80px;
+}

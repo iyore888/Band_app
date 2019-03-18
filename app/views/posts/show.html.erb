@@ -42,11 +42,11 @@
     <hr class="my-4">
   </div>
   <div class="col-md-9 panel panel-default box">
-    <div class="panel-heading">
+    <div class="panel-heading" style="background-color: #95cc4a;">
       <h1 class="panel-title p-subject">Chat Room</h1>
     </div>
-    <form>
-      <input type="text" data-behavior="room_speaker">
+    <form class="chat-form">
+      <textarea type="text" data-behavior="room_speaker" placeholder="Please input here"></textarea>
     </form>
     <div id="messages" class="panel-body">
       <%= render @messages %>
